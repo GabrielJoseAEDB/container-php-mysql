@@ -1,4 +1,4 @@
 FROM php:7.2-apache
 WORKDIR /var/www/html
-RUN docker-php-ext-install mbstring pdo pdo_mysqli mysqli zip && \
- git clone -b "v3.5.13" https://github.com/moodle/moodle.git
+RUN docker-php-ext-install mbstring pdo pdo_mysqli mysqli zip
+RUN git clone -b "v3.5.13" https://github.com/moodle/moodle.git
