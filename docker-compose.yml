@@ -10,7 +10,7 @@ services:
     ports:
       - '8088:80'
     volumes:
-      - ./html:/var/www/html
+      - ./www:/var/www
     depends_on:
       - mysqldb
     links:
