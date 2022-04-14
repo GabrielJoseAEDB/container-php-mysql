@@ -22,6 +22,10 @@ services:
     restart: always
     ports:
       - '3307:3306'
+    volumes:
+      - ./mysql-dump:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=moodle
+      - MYSQL_USER=moodledude
+      - MYSQL_PASSWORD=moodlepass
