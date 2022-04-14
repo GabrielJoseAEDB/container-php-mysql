@@ -1,7 +1,7 @@
 # container-php-mysql
-Repositório para imagem docker que conterá uma versão do php 7.2, com as extensões necessárias pelo moodle 3.5
-
-Instruções:
+Repositório para imagem docker que conterá uma versão do php 7.2, com as extensões necessárias pelo moodle 3.5  
+  
+Instruções:  
 -Instalar docker e docker-compose  
 -Baixar este repositório através de git clone ou zip  
 -Executar (sudo )docker-compose up -d na pasta  
