@@ -4,8 +4,11 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git
 RUN apt-get install -y \
-        libzip-dev \
+        libzip-dev libicu-dev libxml2-dev\
         zip \
-            && docker-php-ext-configure zip --with-libzip
-            && docker-php-ext-install zip mbstring pdo mysqli
+            && docker-php-ext-configure zip --with-libzip \
+            && docker-php-ext-configure intl \
+            && docker-php-ext-install zip mbstring pdo mysqli gd intl xmlrpc soap opcache	
 RUN git clone -b "v3.5.13" https://github.com/moodle/moodle.git
+RUN chown -R www-data:www-data /var/www
+RUN chmod -R 775 /var/www/html

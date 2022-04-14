@@ -10,7 +10,7 @@ services:
     ports:
       - '8088:80'
     volumes:
-      - ./html:/var/www/html/test
+      - ./html:/var/www/html
     depends_on:
       - mysqldb
     links:
@@ -24,4 +24,4 @@ services:
       - '3307:3306'
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=biblioteca
+      - MYSQL_DATABASE=moodle
