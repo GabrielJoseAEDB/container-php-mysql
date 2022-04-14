@@ -2,7 +2,7 @@ FROM php:7.2-apache
 WORKDIR /var/www/html
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y git
+    apt-get install -y git libpng-dev
 RUN apt-get install -y libzip-dev libicu-dev libxml2-dev zip
 RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-configure intl
